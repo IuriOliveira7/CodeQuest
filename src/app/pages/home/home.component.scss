@@ -1,29 +1,60 @@
+@font-face {
+  font-family: DagestaN;
+  src: url('../../../assets/fonts/DagestaN/DagestaN\ .ttf');
+}
+
 .planoDeFundo {
-  background-image: url(../../../assets/img/Background3.jpg);
+  background-image: url(../../../assets/img/Background.png);
   background-size: cover;
   background-position: center;
   background-repeat: none;
   width: 100%;
-  height: 919px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  
 
   .opcoesCentrais {
     width: 50%;
     height: 100%;
-
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'DagestaN';
 
-    .linhaTitulo {
-      width: 100%;
-      height: 20%;
+    .linhaTitulo h2 {
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+      font-size: 7rem;
+      margin: 0;
+      margin-bottom: 5rem;
     }
+    
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+    
 
     .linha {
       width: 100%;
@@ -75,5 +106,26 @@
         cursor: pointer;
       }
     }
+  }
+
+  .button-som{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    z-index: 1;
+    margin-top: 43rem;
+    margin-left: 95rem;
+    background-image: url(../../../assets/img/som_ativo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .5s;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .muted {
+    background-image: url(../../../assets/img/som_mute.png);
   }
 }

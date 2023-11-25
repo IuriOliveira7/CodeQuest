@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { AudioService } from 'src/app/service/audio/audio.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private router: Router) {}
+  playpause: boolean = false;
+  buttonClass: string = 'button-som';
 
-  ngOnInit() {}
+  constructor(private router: Router, public audioService: AudioService) {}
+
+  ngOnInit() {
+    this.audioService.play();
+  }
 
   redirecionar(pagina: string) {
     this.router.navigate([pagina]);
@@ -17,5 +23,15 @@ export class HomeComponent {
 
   jogar() {
     this.redirecionar('game');
+  }
+
+  alternarAudio() {
+    if (this.playpause) {
+      this.audioService.pause();
+    } else {
+      this.audioService.play();
+    }
+    this.playpause = this.audioService.playpause();
+    this.buttonClass = this.playpause ? 'button-som' : 'muted';
   }
 }
