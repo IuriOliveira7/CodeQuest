@@ -14,9 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 import { CreditosComponent } from './pages/creditos/creditos.component';
+import { BackgroundTransicaoComponent } from './components/background-transicao/background-transicao.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GameComponent, TimerComponent, IcebergComponent, ModalPerguntasComponent, InfosJogadorComponent, OpcoesComponent, LoadingScreenComponent, CreditosComponent],
+  declarations: [AppComponent, HomeComponent, GameComponent, TimerComponent, IcebergComponent, ModalPerguntasComponent, InfosJogadorComponent, OpcoesComponent, LoadingScreenComponent, CreditosComponent, BackgroundTransicaoComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

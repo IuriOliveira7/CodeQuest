@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { PerguntasService } from 'src/app/service/perguntas.service';
 
 @Component({
@@ -9,17 +9,17 @@ import { PerguntasService } from 'src/app/service/perguntas.service';
 export class ModalPerguntasComponent {
   constructor(private servicePerguntas: PerguntasService) {}
 
+  @Output() exportNivel = new EventEmitter<number>();
+
   nivel = 1;
   perguntas = this.servicePerguntas.getPerguntas();
   alternativaSelecionada = '';
 
   verificarResposta(pergunta: any) {
     if (this.alternativaSelecionada == pergunta.alternativaCorreta) {
-      alert('acerto miseravi');
       this.alternativaSelecionada = '';
       this.nivel++;
-    } else {
-      alert('errrouuuuu');
+      this.exportNivel.emit(this.nivel);
     }
   }
 }

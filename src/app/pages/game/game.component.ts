@@ -9,6 +9,9 @@ import { AudioService } from 'src/app/service/audio/audio.service';
 })
 export class GameComponent {
   playpause: boolean = false;
+  nivel: number = 1;
+  loading = true;
+  emTransicao = false;
 
   constructor(public audioService: AudioService) {}
 
@@ -21,5 +24,12 @@ export class GameComponent {
     }, 2000);
   }
 
-  loading = true;
+  alteraNivel(nivel: any) {
+    this.nivel = nivel;
+    this.emTransicao = true;
+
+    setTimeout(() => {
+      this.emTransicao = false;
+    }, 3000);
+  }
 }
