@@ -5,7 +5,7 @@ import { AudioService } from 'src/app/service/audio/audio.service';
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  styleUrls: ['./game.component.scss'],
 })
 export class GameComponent {
   playpause: boolean = false;
@@ -16,15 +16,10 @@ export class GameComponent {
     this.audioService.play(2);
     this.audioService.pause(1);
 
-
     setTimeout(() => {
       this.loading = false;
-    }, 5000); 
+    }, 2000);
   }
 
-
   loading = true;
-
-
-
 }
