@@ -12,9 +12,10 @@ import { InfosJogadorComponent } from './components/infos-jogador/infos-jogador.
 import { OpcoesComponent } from './pages/opcoes/opcoes.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GameComponent, TimerComponent, IcebergComponent, ModalPerguntasComponent, InfosJogadorComponent, OpcoesComponent],
+  declarations: [AppComponent, HomeComponent, GameComponent, TimerComponent, IcebergComponent, ModalPerguntasComponent, InfosJogadorComponent, OpcoesComponent, LoadingScreenComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

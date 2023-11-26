@@ -15,6 +15,16 @@ export class GameComponent {
   ngOnInit(): void {
     this.audioService.play(2);
     this.audioService.pause(1);
+
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 5000); 
   }
+
+
+  loading = true;
+
+
 
 }

@@ -1,12 +1,14 @@
-<div class="corpo">
-  <app-infos-jogador></app-infos-jogador>
-  <div class="esquerda">
-    <app-timer></app-timer>
-    <app-modal-perguntas></app-modal-perguntas>
-  </div>
-  <div class="direita">
-    <app-iceberg></app-iceberg>
+<app-loading-screen *ngIf="loading"></app-loading-screen>
+
+<div *ngIf="!loading">
+  <div class="corpo">
+    <app-infos-jogador></app-infos-jogador>
+    <div class="esquerda">
+      <app-timer></app-timer>
+      <app-modal-perguntas></app-modal-perguntas>
+    </div>
+    <div class="direita">
+      <app-iceberg></app-iceberg>
+    </div>
   </div>
 </div>
-
-
