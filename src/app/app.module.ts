@@ -9,10 +9,13 @@ import { TimerComponent } from './components/timer/timer.component';
 import { IcebergComponent } from './components/iceberg/iceberg.component';
 import { ModalPerguntasComponent } from './components/modal-perguntas/modal-perguntas.component';
 import { InfosJogadorComponent } from './components/infos-jogador/infos-jogador.component';
+import { OpcoesComponent } from './pages/opcoes/opcoes.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GameComponent, TimerComponent, IcebergComponent, ModalPerguntasComponent, InfosJogadorComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, HomeComponent, GameComponent, TimerComponent, IcebergComponent, ModalPerguntasComponent, InfosJogadorComponent, OpcoesComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

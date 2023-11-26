@@ -1,3 +1,5 @@
+<app-opcoes *ngIf="isModalAberto" [@modalState]="isModalAberto ? 'show' : 'hide'" (fecharModal)="fecharModal()"></app-opcoes>
+
 <div class="planoDeFundo">
   <div class="opcoesCentrais">
     <div class="linhaTitulo">
@@ -7,7 +9,7 @@
       <button (click)="jogar()"><span>JOGAR</span></button>
     </div>
     <div class="linha">
-      <button><span>OPÇÕES</span></button>
+      <button (click)="AbrirModal()"><span>OPÇÕES</span></button>
     </div>
     <div class="linha">
       <button><span>SAIR</span></button>

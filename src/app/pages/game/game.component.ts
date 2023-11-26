@@ -8,11 +8,13 @@ import { AudioService } from 'src/app/service/audio/audio.service';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent {
+  playpause: boolean = false;
 
   constructor(public audioService: AudioService) {}
 
-  ngOnInit() {
-    this.audioService.pause();
+  ngOnInit(): void {
+    this.audioService.play(2);
+    this.audioService.pause(1);
   }
 
 }

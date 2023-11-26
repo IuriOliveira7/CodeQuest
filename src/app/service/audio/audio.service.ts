@@ -1,26 +1,85 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AudioService {
-  private audio: HTMLAudioElement;
+  private audioHome: HTMLAudioElement;
+  private audioJogo: HTMLAudioElement;
+
+  // Adicione propriedades para armazenar configurações de volume
+  volumeHome: number = 15;
+  volumeJogo: number = 15;
+
+  // Adicione EventEmitter para emitir eventos quando o volume for alterado
+  volumeHomeChanged = new EventEmitter<number>();
+  volumeJogoChanged = new EventEmitter<number>();
 
   constructor() {
-    this.audio = new Audio();
-    this.audio.src = '../../assets/som/Paul_Werner_-_Pixel_Hunt.mp3'; // Substitua com o caminho real do seu arquivo de áudio
-    this.audio.loop = true;
+    this.audioHome = new Audio();
+    this.audioHome.src = '../../assets/som/PinkFox_-_Farewell_Memories__Full_Version_.mp3';
+    this.audioHome.loop = true;
+
+    this.audioJogo = new Audio();
+    this.audioJogo.src = '../../assets/som/rfsound_-_Dark_Epic_Build_Up__Full_.mp3';
+    this.audioJogo.loop = true;
+
+    // Configure volumes iniciais
+    this.audioHome.volume = this.volumeHome / 100;
+    this.audioJogo.volume = this.volumeJogo / 100;
   }
 
-  play() {
-    this.audio.play();
+  configureVolumes(volumeHome: number, volumeJogo: number): void {
+    this.volumeHome = volumeHome;
+    this.volumeJogo = volumeJogo;
+
+    this.audioHome.volume = this.volumeHome / 100;
+    this.audioJogo.volume = this.volumeJogo / 100;
   }
 
-  pause() {
-    this.audio.pause();
+  play(audioNumber: number = 1) {
+    if (audioNumber === 1) {
+      this.audioHome.play();
+    } else if (audioNumber === 2) {
+      this.audioJogo.play();
+    }
   }
 
-  playpause(): boolean {
-    return !this.audio.paused;
+  pause(audioNumber: number = 1) {
+    if (audioNumber === 1) {
+      this.audioHome.pause();
+    } else if (audioNumber === 2) {
+      this.audioJogo.pause();
+    }
+  }
+
+  playpause(audioNumber: number = 1): boolean {
+    if (audioNumber === 1) {
+      return !this.audioHome.paused;
+    } else if (audioNumber === 2) {
+      return !this.audioJogo.paused;
+    }
+
+    return false;
+  }
+
+  setVolume(audioNumber: number, volume: number) {
+    const audio = audioNumber === 1 ? this.audioHome : this.audioJogo;
+  
+    // Emitir evento sempre, mesmo que o valor não tenha mudado
+    if (audioNumber === 1) {
+      this.volumeHome = volume;
+      this.volumeHomeChanged.emit(volume);
+    } else if (audioNumber === 2) {
+      this.volumeJogo = volume;
+      this.volumeJogoChanged.emit(volume);
+    }
+  
+    audio.volume = volume / 100;
+  }
+
+  getVolume(audioNumber: number): number {
+    const audio = audioNumber === 1 ? this.audioHome : this.audioJogo;
+    return audio.volume * 100;
   }
 }
