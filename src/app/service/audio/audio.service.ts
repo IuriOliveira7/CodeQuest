@@ -7,11 +7,9 @@ export class AudioService {
   private audioHome: HTMLAudioElement;
   private audioJogo: HTMLAudioElement;
 
-  // Adicione propriedades para armazenar configurações de volume
   volumeHome: number = 15;
   volumeJogo: number = 15;
 
-  // Adicione EventEmitter para emitir eventos quando o volume for alterado
   volumeHomeChanged = new EventEmitter<number>();
   volumeJogoChanged = new EventEmitter<number>();
 
@@ -24,7 +22,6 @@ export class AudioService {
     this.audioJogo.src = '../../assets/som/rfsound_-_Dark_Epic_Build_Up__Full_.mp3';
     this.audioJogo.loop = true;
 
-    // Configure volumes iniciais
     this.audioHome.volume = this.volumeHome / 100;
     this.audioJogo.volume = this.volumeJogo / 100;
   }
@@ -66,7 +63,6 @@ export class AudioService {
   setVolume(audioNumber: number, volume: number) {
     const audio = audioNumber === 1 ? this.audioHome : this.audioJogo;
   
-    // Emitir evento sempre, mesmo que o valor não tenha mudado
     if (audioNumber === 1) {
       this.volumeHome = volume;
       this.volumeHomeChanged.emit(volume);

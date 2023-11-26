@@ -11,15 +11,8 @@ export class OpcoesComponent {
 
   ngOnInit(): void {
     this.audioService.play(1);
-
-    this.audioService.volumeHomeChanged.subscribe((volume) => {
-      console.log('Volume Home received:', volume);
-    });
-
-    this.audioService.volumeJogoChanged.subscribe((volume) => {
-      console.log('Volume Jogo received:', volume);
-      // Não é necessário atribuir o volume aqui, pois já está sendo feito no serviço
-    });
+    this.audioService.volumeHomeChanged.subscribe((volume) => {});
+    this.audioService.volumeJogoChanged.subscribe((volume) => {});
   }
 
   onVolumeChange(audioNumber: number, { target }: Event) {
@@ -34,7 +27,8 @@ export class OpcoesComponent {
 
   @Output() fecharModal = new EventEmitter<void>();
 
-  onSairClick() {
+  fecharOpcoes() {
     this.fecharModal.emit();
   }
+
 }
