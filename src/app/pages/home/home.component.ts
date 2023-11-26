@@ -10,6 +10,7 @@ import { AudioService } from 'src/app/service/audio/audio.service';
 export class HomeComponent {
   playpause: boolean = false;
   buttonClass: string = 'button-som';
+  isModalAberto: boolean = false;
 
   constructor(private router: Router, public audioService: AudioService) {}
 
@@ -26,6 +27,10 @@ export class HomeComponent {
     this.redirecionar('game');
   }
 
+  creditos() {
+    this.redirecionar('creditos');
+  }
+
   alternarAudio() {
     if (this.playpause) {
       this.audioService.pause();
@@ -35,8 +40,6 @@ export class HomeComponent {
     this.playpause = this.audioService.playpause();
     this.buttonClass = this.playpause ? 'button-som' : 'muted';
   }
-
-  isModalAberto: boolean = false;
 
   AbrirModal() {
     this.isModalAberto = !this.isModalAberto;
