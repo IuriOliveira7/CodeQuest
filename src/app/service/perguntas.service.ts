@@ -12,7 +12,7 @@ export class PerguntasService {
         nivel: 1,
         categoria: 'Programação WEB',
         pergunta:
-          'Qual linguagem de marcação é usada para estruturar o conteúdo de uma página web?',
+          'Qual linguagem de marcação é usada para estruturar o conteudo de uma pagina web?',
         alternativas: { a: 'JavaScript', b: 'CSS', c: 'HTML', d: 'PHP' },
         alternativaCorreta: 'c',
       },
