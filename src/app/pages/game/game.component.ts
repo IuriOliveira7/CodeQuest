@@ -43,6 +43,9 @@ export class GameComponent {
 
     if(this.nivel > 38) {
       this.win = true;
+      setTimeout(() => {
+        this.redirecionar('');
+      }, 25000);
     }
   }
 
