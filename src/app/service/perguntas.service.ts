@@ -280,6 +280,225 @@ export class PerguntasService {
         },
         alternativaCorreta: 'c',
       },
+      {
+        nivel: 23,
+        categoria: 'Inteligência Artificial',
+        pergunta: 'O que é aprendizado de máquina?',
+        alternativas: {
+          a: 'Um algoritmo que executa tarefas repetitivas',
+          b: 'Um método para programar computadores para aprenderem a partir de dados',
+          c: 'Um software que simula a inteligência humana',
+          d: 'Uma linguagem de programação avançada',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 24,
+        categoria: 'Ciência de Dados',
+        pergunta: 'O que é normalização de dados em estatística?',
+        alternativas: {
+          a: 'Um método para converter dados em formato JSON',
+          b: 'Um processo de ajuste de dados para uma escala padrão',
+          c: 'Uma técnica para criar gráficos de barras',
+          d: 'Um modelo de regressão linear',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 24,
+        categoria: 'Redes de Computadores',
+        pergunta: 'Qual é a função do protocolo TCP?',
+        alternativas: {
+          a: 'Para rotear pacotes na Internet',
+          b: 'Para garantir a entrega de pacotes de forma confiável',
+          c: 'Para identificar dispositivos em uma rede',
+          d: 'Para criar redes locais sem fio',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 25,
+        categoria: 'Sistemas Operacionais',
+        pergunta: 'O que é um sistema operacional de tempo real?',
+        alternativas: {
+          a: 'Um sistema que executa tarefas em velocidade acelerada',
+          b: 'Um sistema que responde a eventos em tempo determinístico',
+          c: 'Um sistema que prioriza tarefas de acordo com a complexidade',
+          d: 'Um sistema que funciona apenas em ambientes virtuais',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 26,
+        categoria: 'Desenvolvimento Mobile',
+        pergunta: 'Qual é a linguagem de programação principal para o desenvolvimento Android?',
+        alternativas: {
+          a: 'Swift',
+          b: 'Java',
+          c: 'Python',
+          d: 'C#',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 27,
+        categoria: 'Segurança da Informação',
+        pergunta: 'O que é um ataque de força bruta?',
+        alternativas: {
+          a: 'Um ataque que utiliza inteligência artificial para invadir sistemas',
+          b: 'Um ataque que explora vulnerabilidades conhecidas em um sistema',
+          c: 'Um ataque que tenta adivinhar senhas através de tentativas repetitivas',
+          d: 'Um ataque que se baseia na engenharia social',
+        },
+        alternativaCorreta: 'c',
+      },
+    
+      {
+        nivel: 28,
+        categoria: 'Blockchain',
+        pergunta: 'O que é um contrato inteligente (smart contract) em blockchain?',
+        alternativas: {
+          a: 'Um acordo legal entre duas partes',
+          b: 'Um programa autoexecutável que executa ações quando condições são atendidas',
+          c: 'Um documento escrito em linguagem natural',
+          d: 'Um protocolo de segurança para transações blockchain',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 29,
+        categoria: 'Machine Learning',
+        pergunta: 'O que é overfitting em aprendizado de máquina?',
+        alternativas: {
+          a: 'Um modelo que generaliza bem para dados novos',
+          b: 'Um modelo que se ajusta muito aos dados de treinamento e não generaliza bem',
+          c: 'Um tipo de algoritmo de clustering',
+          d: 'Um método para reduzir a dimensionalidade dos dados',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 30,
+        categoria: 'Programação Funcional',
+        pergunta: 'O que é imutabilidade em programação funcional?',
+        alternativas: {
+          a: 'A capacidade de alterar variáveis durante a execução do programa',
+          b: 'A prática de evitar a mudança de estado de objetos após a sua criação',
+          c: 'A técnica de manter funções como objetos de primeira classe',
+          d: 'A característica de permitir a execução de funções em paralelo',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 31,
+        categoria: 'Desenvolvimento Web',
+        pergunta: 'O que é AJAX?',
+        alternativas: {
+          a: 'Uma linguagem de programação para desenvolvimento web',
+          b: 'Uma técnica que permite a atualização de partes de uma página sem recarregá-la completamente',
+          c: 'Um padrão de projeto para interfaces gráficas',
+          d: 'Um framework para construção de APIs RESTful',
+        },
+        alternativaCorreta: 'b',
+      },
+    
+      {
+        nivel: 32,
+        categoria: 'Big Data',
+        pergunta: 'O que é Hadoop?',
+        alternativas: {
+          a: 'Um banco de dados relacional',
+          b: 'Um sistema operacional para servidores de grande porte',
+          c: 'Um framework de código aberto para processamento distribuído de grandes conjuntos de dados',
+          d: 'Um protocolo de comunicação para redes de alta velocidade',
+        },
+        alternativaCorreta: 'c',
+      },
+    
+      {
+        nivel: 33,
+        categoria: 'UX/UI Design',
+        pergunta: 'O que é wireframe em design de interface?',
+        alternativas: {
+          a: 'Um esboço visual de uma página ou aplicativo, representando a estrutura e layout básicos',
+          b: 'Um tipo de fonte utilizada em designs minimalistas',
+          c: 'Uma técnica de animação para melhorar a experiência do usuário',
+          d: 'Um padrão de codificação para otimizar o desempenho de interfaces gráficas',
+        },
+        alternativaCorreta: 'a',
+      },
+    
+      {
+        nivel: 34,
+        categoria: 'Cloud Computing',
+        pergunta: 'O que é uma instância em computação em nuvem?',
+        alternativas: {
+          a: 'Um software de virtualização',
+          b: 'Um ambiente de desenvolvimento integrado na nuvem',
+          c: 'Uma cópia de segurança de dados armazenada em um servidor remoto',
+          d: 'Um servidor virtualizado que pode ser usado pelos usuários',
+        },
+        alternativaCorreta: 'd',
+      },
+      {
+        nivel: 35,
+        categoria: 'Cibersegurança',
+        pergunta: 'O que é phishing?',
+        alternativas: {
+          a: 'Um tipo de malware que se propaga por e-mails',
+          b: 'Um ataque que explora vulnerabilidades em firewalls',
+          c: 'Uma técnica de engenharia social que visa enganar usuários para obter informações sensíveis',
+          d: 'Um método de criptografia utilizado para proteger senhas',
+        },
+        alternativaCorreta: 'c',
+      },
+    
+      {
+        nivel: 36,
+        categoria: 'Programação Orientada a Objetos',
+        pergunta: 'O que é encapsulamento em programação orientada a objetos?',
+        alternativas: {
+          a: 'A prática de agrupar dados e métodos que operam nesses dados em uma única unidade',
+          b: 'A herança de características entre classes',
+          c: 'A capacidade de criar múltiplas instâncias de uma classe',
+          d: 'A técnica de tornar um método disponível em várias classes',
+        },
+        alternativaCorreta: 'a',
+      },
+    
+      {
+        nivel: 37,
+        categoria: 'Data Science',
+        pergunta: 'O que é validação cruzada (cross-validation) em machine learning?',
+        alternativas: {
+          a: 'Um método para testar modelos de aprendizado de máquina em conjuntos de dados diferentes',
+          b: 'Um algoritmo de classificação de dados desbalanceados',
+          c: 'Um tipo de transformação de dados para reduzir a dimensionalidade',
+          d: 'Um processo de avaliação de modelos utilizando o mesmo conjunto de dados de treinamento',
+        },
+        alternativaCorreta: 'a',
+      },
+    
+      {
+        nivel: 38,
+        categoria: 'DevOps',
+        pergunta: 'O que é integração contínua?',
+        alternativas: {
+          a: 'Um processo de desenvolvimento que visa entregar grandes atualizações em ciclos longos',
+          b: 'Uma prática que envolve a combinação frequente de código de diferentes desenvolvedores em um repositório compartilhado',
+          c: 'Um modelo de entrega de software que ocorre apenas em grandes lançamentos',
+          d: 'Um método de teste que verifica apenas a interface do usuário',
+        },
+        alternativaCorreta: 'b',
+      }
     ];
 
     return perguntas;
