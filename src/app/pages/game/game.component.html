@@ -27,7 +27,7 @@
   <div class="gameOver" *ngIf="vidas == 0"></div>
 
   <div class="corpo">
-    <app-infos-jogador [vidas]="vidas"></app-infos-jogador>
+    <app-infos-jogador [vidas]="vidas" [pontuacao]="pontuacao"></app-infos-jogador>
     <div class="esquerda">
       <app-timer></app-timer>
       <app-modal-perguntas

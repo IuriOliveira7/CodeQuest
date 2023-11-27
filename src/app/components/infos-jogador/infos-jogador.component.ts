@@ -10,6 +10,7 @@ export class InfosJogadorComponent {
   constructor(private router: Router) {}
 
   @Input() vidas: number = 5;
+  @Input() pontuacao: number = 5;
 
   redirecionar(pagina: string) {
     this.router.navigate([pagina]);

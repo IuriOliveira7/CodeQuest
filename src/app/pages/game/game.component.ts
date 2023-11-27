@@ -15,6 +15,7 @@ export class GameComponent {
   acessoNegado = false;
   vidas = 5;
   win = false;
+  pontuacao = 0;
 
   constructor(public audioService: AudioService, private router: Router) {}
 
@@ -34,6 +35,7 @@ export class GameComponent {
   alteraNivel(nivel: any) {
     this.nivel = nivel;
     this.emTransicao = true;
+    this.pontuacao = this.pontuacao + 250;
 
     setTimeout(() => {
       this.emTransicao = false;
