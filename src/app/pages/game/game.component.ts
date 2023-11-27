@@ -14,6 +14,7 @@ export class GameComponent {
   emTransicao = false;
   acessoNegado = false;
   vidas = 5;
+  win = false;
 
   constructor(public audioService: AudioService, private router: Router) {}
 
@@ -37,6 +38,10 @@ export class GameComponent {
     setTimeout(() => {
       this.emTransicao = false;
     }, 3000);
+
+    if(this.nivel > 38) {
+      this.win = true;
+    }
   }
 
   errouAPergunta(errou: boolean) {
