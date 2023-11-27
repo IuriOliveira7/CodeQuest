@@ -12,8 +12,14 @@ export class GameComponent {
   nivel: number = 1;
   loading = true;
   emTransicao = false;
+  acessoNegado = false;
+  vidas = 5;
 
-  constructor(public audioService: AudioService) {}
+  constructor(public audioService: AudioService, private router: Router) {}
+
+  redirecionar(pagina: string) {
+    this.router.navigate([pagina]);
+  }
 
   ngOnInit(): void {
     this.audioService.play(2);
@@ -31,5 +37,21 @@ export class GameComponent {
     setTimeout(() => {
       this.emTransicao = false;
     }, 3000);
+  }
+
+  errouAPergunta(errou: boolean) {
+    this.acessoNegado = errou;
+    this.emTransicao = false;
+    this.vidas--;
+
+    setTimeout(() => {
+      this.acessoNegado = false;
+    }, 3000);
+
+    if (this.vidas == 0) {
+      setTimeout(() => {
+        this.redirecionar('');
+      }, 3000);
+    }
   }
 }

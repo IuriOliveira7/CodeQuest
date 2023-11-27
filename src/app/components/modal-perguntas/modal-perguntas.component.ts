@@ -10,6 +10,7 @@ export class ModalPerguntasComponent {
   constructor(private servicePerguntas: PerguntasService) {}
 
   @Output() exportNivel = new EventEmitter<number>();
+  @Output() errouPergunta = new EventEmitter<boolean>();
 
   nivel = 1;
   perguntas = this.servicePerguntas.getPerguntas();
@@ -20,6 +21,8 @@ export class ModalPerguntasComponent {
       this.alternativaSelecionada = '';
       this.nivel++;
       this.exportNivel.emit(this.nivel);
+    }else {
+      this.errouPergunta.emit(true);
     }
   }
 }
