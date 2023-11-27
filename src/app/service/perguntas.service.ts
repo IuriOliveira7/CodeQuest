@@ -307,19 +307,6 @@ export class PerguntasService {
       },
     
       {
-        nivel: 24,
-        categoria: 'Redes de Computadores',
-        pergunta: 'Qual é a função do protocolo TCP?',
-        alternativas: {
-          a: 'Para rotear pacotes na Internet',
-          b: 'Para garantir a entrega de pacotes de forma confiável',
-          c: 'Para identificar dispositivos em uma rede',
-          d: 'Para criar redes locais sem fio',
-        },
-        alternativaCorreta: 'b',
-      },
-    
-      {
         nivel: 25,
         categoria: 'Sistemas Operacionais',
         pergunta: 'O que é um sistema operacional de tempo real?',
