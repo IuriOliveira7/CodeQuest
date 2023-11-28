@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersaveService } from 'src/app/service/usuario/usersave.service';
 
 @Component({
   selector: 'app-infos-jogador',
@@ -7,8 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./infos-jogador.component.scss'],
 })
 export class InfosJogadorComponent {
-  constructor(private router: Router) {}
+  
+  savedUsername: string | null;
 
+  constructor(private router: Router, private usersaveService: UsersaveService) {
+    this.savedUsername = this.usersaveService.getUsername();
+  }
+  
   @Input() vidas: number = 5;
   @Input() pontuacao: number = 5;
 
@@ -17,6 +23,6 @@ export class InfosJogadorComponent {
   }
 
   sair() {
-    this.redirecionar('');
+    this.redirecionar('/home');
   }
 }

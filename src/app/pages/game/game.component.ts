@@ -19,6 +19,7 @@ export class GameComponent {
 
   constructor(public audioService: AudioService, private router: Router) {}
 
+
   redirecionar(pagina: string) {
     this.router.navigate([pagina]);
   }
@@ -44,7 +45,7 @@ export class GameComponent {
     if(this.nivel > 38) {
       this.win = true;
       setTimeout(() => {
-        this.redirecionar('');
+        this.redirecionar('/home');
       }, 25000);
     }
   }
@@ -60,8 +61,11 @@ export class GameComponent {
 
     if (this.vidas == 0) {
       setTimeout(() => {
-        this.redirecionar('');
+        this.redirecionar('/home');
       }, 3000);
     }
   }
+
+
+
 }

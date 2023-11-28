@@ -15,7 +15,7 @@ export class CreditosComponent {
   }
 
   sair() {
-    this.redirecionar('');
+    this.redirecionar('/home');
   }
   
 }
