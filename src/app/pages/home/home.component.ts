@@ -1,6 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AudioService } from 'src/app/service/audio/audio.service';
+import { PlayerService } from 'src/app/service/avatar/player.service';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +12,18 @@ export class HomeComponent {
   playpause: boolean = false;
   buttonClass: string = 'button-som';
   isModalAberto: boolean = false;
+  isModalAvatarAberto: boolean = false;
+  currentPlayerImage: string | undefined;
 
-  constructor(private router: Router, public audioService: AudioService) {}
+  constructor(private router: Router, public audioService: AudioService, private playerService: PlayerService) {}
 
   ngOnInit(): void {
     this.audioService.play(1);
     this.audioService.pause(2);
+
+    this.playerService.currentPlayerImage.subscribe(imageUrl => {
+      this.currentPlayerImage = imageUrl;
+    });
   }
 
   redirecionar(pagina: string) {
@@ -45,8 +52,16 @@ export class HomeComponent {
     this.isModalAberto = !this.isModalAberto;
   }
 
+  AbrirModalAvatar() {
+    this.isModalAvatarAberto = !this.isModalAvatarAberto;
+  }
+
   fecharModal() {
     this.isModalAberto = false;
+  }
+
+  fecharModalAvatar() {
+    this.isModalAvatarAberto = false;
   }
   
 }

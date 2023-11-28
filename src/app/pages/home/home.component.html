@@ -1,6 +1,8 @@
 <app-opcoes *ngIf="isModalAberto" (fecharModal)="fecharModal()"></app-opcoes>
 
-<div class="planoDeFundo">
+<app-player *ngIf="isModalAvatarAberto" (fecharModal)="fecharModalAvatar()"></app-player>
+
+<!-- <div class="planoDeFundo">
   <div class="opcoesCentrais">
     <div class="linhaTitulo">
       <h2 class="animate-character" data-text="CodeQueste">CodeQuest</h2>
@@ -17,9 +19,9 @@
   </div>
 
   <div (click)="alternarAudio()" [ngClass]="buttonClass" class="button-som"></div>
-</div>
+</div> -->
 
-<!-- <div class="home_page">
+<div class="home_page">
 
     <div class="main">
 
@@ -40,10 +42,10 @@
           </div>
           <div class="opcoes_menu">
             <ul>
-              <li>> Jogar</li>
-              <li>> Opções</li>
-              <li>> Como Jogar?</li>
-              <li>> Sobre</li>
+              <li (click)="jogar()">> Jogar</li>
+              <li (click)="AbrirModal()">> Opções</li>
+              <li (click)="AbrirModalAvatar()">> Avatar</li>
+              <li (click)="creditos()">> Sobre</li>
             </ul>
           </div>
         </div>
@@ -51,7 +53,7 @@
 
       <div class="player">
         <div class="user_player">
-
+          <img [src]="currentPlayerImage" alt="">
         </div>
       </div>
 
@@ -61,4 +63,4 @@
 
     </div>
 
-</div> -->
+</div>
