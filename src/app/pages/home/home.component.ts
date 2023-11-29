@@ -63,5 +63,9 @@ export class HomeComponent {
   fecharModalAvatar() {
     this.isModalAvatarAberto = false;
   }
+
+  sair(){
+    this.redirecionar('');
+  }
   
 }

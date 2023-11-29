@@ -50,10 +50,14 @@
 
   &.iceberg-background_dificil {
     background-image: url(../../../assets/img/ICEBERGEDIT_DIFICIL.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &.iceberg-background_dificil_2 {
     background-image: url(../../../assets/img/ICEBERGEDIT_DIFICIL_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .iceberg_main {
